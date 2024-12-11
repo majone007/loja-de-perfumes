@@ -1,0 +1,151 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte e cores gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #9b59b6;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.header p {
+    font-size: 1.1rem;
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    gap: 15px;
+}
+
+.filtro {
+    background-color: #9b59b6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filtro:hover {
+    background-color: #8e44ad;
+}
+
+/* Estilo do Catálogo */
+.catalogo {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Lista de Produtos */
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Padrão: 5 produtos por linha */
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Produto */
+.produto {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+/* Imagem do Produto */
+.produto img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #9b59b6;
+    border-radius: 10px;
+}
+
+/* Informações do Produto */
+.info {
+    margin-top: 15px;
+}
+
+.info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.info p {
+    color: #777;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.preco {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #9b59b6;
+    margin: 10px 0;
+}
+
+/* Botão de Compra */
+.produto button {
+    background-color: #9b59b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.produto button:hover {
+    background-color: #8e44ad;
+}
+
+/* Responsividade para celulares (2 produtos por linha) */
+@media (max-width: 768px) {
+    .produtos {
+        grid-template-columns: repeat(2, 1fr); /* 2 produtos por linha */
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsividade para tablets (3 produtos por linha) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .produtos {
+        grid-template-columns: repeat(3, 1fr); /* 3 produtos por linha */
+    }
+}
